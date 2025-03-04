@@ -105,6 +105,10 @@ spec:
       description: Path to a file with build arguments for buildah, see https://www.mankier.com/1/buildah-build#--build-arg-file
       name: build-args-file
       type: string
+    - default: "etc-pki-entitlement"
+      description: Name of secret which contains the entitlement certificates
+      type: string
+      name: entitlement-secret
   results:
     - description: ""
       name: IMAGE_URL
@@ -211,6 +215,8 @@ spec:
             - $(params.build-args[*])
         - name: BUILD_ARGS_FILE
           value: $(params.build-args-file)
+        - name: ENTITLEMENT_SECRET
+          value: $(params.entitlement-secret)
       runAfter:
         - prefetch-dependencies
       taskRef:
