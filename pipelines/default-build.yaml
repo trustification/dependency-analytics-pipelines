@@ -489,7 +489,7 @@ spec:
         - name: name
           value: sast-unicode-check
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-sast-unicode-check:0.2@sha256:e4a5215b45b1886a185a9db8ab392f8440c2b0848f76d719885637cf8d2628ed
+          value: quay.io/konflux-ci/tekton-catalog/task-sast-unicode-check:0.2@sha256:4d5bf6549e42184e462ab7ccfba0153954c65214aa82f319a3215e94e068cded
         - name: kind
           value: task
         resolver: bundles
