@@ -327,7 +327,7 @@ spec:
           - name: name
             value: clair-scan
           - name: bundle
-            value: quay.io/konflux-ci/tekton-catalog/task-clair-scan:0.2@sha256:68a8fe28527c4469243119a449e2b3a6655f2acac589c069ea6433242da8ed4d
+            value: quay.io/konflux-ci/tekton-catalog/task-clair-scan:0.2@sha256:d354939892f3a904223ec080cc3771bd11931085a5d202323ea491ee8e8c5e43
           - name: kind
             value: task
         resolver: bundles
