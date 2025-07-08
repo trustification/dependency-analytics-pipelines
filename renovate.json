@@ -1,25 +1,37 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices"],
+  "extends": [
+    "config:best-practices"
+  ],
   "tekton": {
-    "fileMatch": ["\\.yaml$", "\\.yml$"],
-    "includePaths": ["pipelines/**", "tasks/**"]
+    "fileMatch": [
+      "\\.yaml$", 
+      "\\.yml$"
+    ],
+    "includePaths": [
+      "pipelines/**", 
+      "tasks/**"
+    ]
   },
   "packageRules": [
     {
-      "matchManagers": ["tekton"],
-      "matchUpdateTypes": ["digest"],
+      "matchManagers": [
+        "tekton"
+      ],
+      "matchUpdateTypes": [
+        "digest", 
+        "patch", 
+        "minor"
+      ],
       "automerge": true
     },
     {
-      "matchManagers": ["tekton"],
-      "matchUpdateTypes": ["patch", "minor"],
-      "automerge": true,
-      "minimumReleaseAge": "24 hours"
-    },
-    {
-      "matchManagers": ["tekton"],
-      "matchUpdateTypes": ["major"],
+      "matchManagers": [
+        "tekton"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
       "automerge": false,
       "dependencyDashboardApproval": true
     }
