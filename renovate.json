@@ -8,14 +8,8 @@
   "packageRules": [
     {
       "matchManagers": ["tekton"],
-      "matchUpdateTypes": ["digest"],
+      "matchUpdateTypes": ["digest", "patch", "minor"],
       "automerge": true
-    },
-    {
-      "matchManagers": ["tekton"],
-      "matchUpdateTypes": ["patch", "minor"],
-      "automerge": true,
-      "minimumReleaseAge": "24 hours"
     },
     {
       "matchManagers": ["tekton"],
